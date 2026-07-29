@@ -92,7 +92,7 @@ export default function Home() {
             onOpenBrochure={openBrochure}
           />
           <div className="visionarc-mark" aria-hidden="true">
-            Excellence by <strong>Vision A  rc</strong>
+            Excellence by <strong>Vision Arc</strong>
           </div>
         </>
       )}
