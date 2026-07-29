@@ -80,7 +80,7 @@ export default function Home() {
             onOpenLocation={openLocation}
           />
           <div className="visionarc-mark" aria-hidden="true">
-            <Image src="/visionarc-logo.png" alt="" width={122} height={84} />
+            Excellence by <strong>Visionarc</strong>
           </div>
         </>
       )}

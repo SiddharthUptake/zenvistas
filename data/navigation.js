@@ -17,6 +17,6 @@ export const dockItems = [
   { label: "Amenities", image: "/icon-amenities.gif" },
   { label: "Gallery", image: "/icon-gallery.gif" },
   { label: "Brochure", image: "/icon-brochure.gif" },
-  { label: "Location", image: "/icon-location.gif", action: "location" },
+  { label: "Location", image: "/location.gif", action: "location" },
   { label: "Enquiry", image: "/icon-enquire.gif", action: "contact" },
 ];

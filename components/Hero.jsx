@@ -4,7 +4,7 @@ export function Hero({ loaded, onLoaded }) {
   return (
     <>
       <Image
-        src="/hero-building.webp"
+        src="/hero-building.avif"
         alt="Aerial view of the Saketham community"
         fill
         className={`object-cover transition-all duration-1000 ${

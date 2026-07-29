@@ -24,7 +24,7 @@ export function BottomDock({ onOpenContact, onOpenInterior, onOpenLocation }) {
             onClick={onClick}
             type={onClick ? "button" : undefined}
           >
-            <span className="grid h-[50px] w-[50px] place-items-center overflow-hidden rounded-full border-2 border-white/30 bg-white/95 transition hover:-translate-y-0.5 hover:border-[#37c9ca] max-[760px]:h-10 max-[760px]:w-10">
+            <span className="grid h-[50px] w-[50px] place-items-center overflow-hidden rounded-full border-2 border-white/30  transition hover:-translate-y-0.5 hover:border-[#37c9ca] max-[760px]:h-10 max-[760px]:w-10">
               <Image
                 src={item.image}
                 alt=""

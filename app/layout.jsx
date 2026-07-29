@@ -14,6 +14,9 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Saketham by Visionarc",
   description: "Saketham by Visionarc.",
+  icons: {
+    icon: "/visionarc-logo.png",
+  },
 };
 
 export default function RootLayout({ children }) {
