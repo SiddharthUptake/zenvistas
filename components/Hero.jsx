@@ -13,8 +13,9 @@ export function Hero({ loaded, onLoaded }) {
         src="/hero-building.avif"
         alt="Aerial view of the Saketham community"
         fill
-        className={`object-cover transition-all duration-1000 ${loaded ? "scale-100 opacity-100" : "scale-[1.035] opacity-0"
-          }`}
+        className={`object-cover transition-all duration-1000 ${
+          loaded ? "scale-100 opacity-100" : "scale-[1.035] opacity-0"
+        }`}
         priority
         sizes="100vw"
         onLoad={onLoaded}
@@ -65,19 +66,15 @@ export function Hero({ loaded, onLoaded }) {
           className="group relative isolate overflow-hidden rounded-full bg-[linear-gradient(120deg,#a97e3f_0%,#e8c483_35%,#d8b26a_55%,#f4dda3_75%,#a97e3f_100%)] bg-[length:220%_100%] px-7 py-3.5 font-mono text-[12px] font-semibold tracking-[0.14em] text-black uppercase shadow-[0_4px_14px_rgba(216,178,106,0.35),0_10px_30px_rgba(0,0,0,0.35)] transition-[background-position,box-shadow] duration-500 animate-[shimmer-bg_5s_linear_infinite] hover:bg-[position:100%_0] hover:shadow-[0_4px_22px_rgba(216,178,106,0.55),0_10px_30px_rgba(0,0,0,0.4)] max-[760px]:px-5 max-[760px]:py-3 max-[760px]:text-[11px]"
         >
           <span className="relative z-[1]">Book a Private Tour</span>
-          <span className="pointer-events-none absolute inset-0 z-[2] -translate-x-full bg-[linear-gradient(115deg,transparent_35%,rgba(255,255,255,0.75)_50%,transparent_65%)] animate-[shimmer-sweep_2.6s_ease-in-out_infinite]" />
+          <span className="pointer-events-none absolute inset-0 z-[2] -translate-x-full bg-[linear-gradient(115deg,transparent_35%,rgba(255,255,255,0.75)_50%,transparent_65%)] animate-[shimmer-sweep_4s_linear_infinite]" />
         </button>
       </div>
 
       <style>{`
-        @keyframes shimmer-bg {
-          0% { background-position: 0% 0%; }
-          100% { background-position: 220% 0%; }
-        }
-        @keyframes shimmer-sweep {
-          0% { transform: translateX(-120%); }
-          55%, 100% { transform: translateX(120%); }
-        }
+          @keyframes shimmer-sweep {
+  0%   { transform: translateX(-150%); }
+  100% { transform: translateX(150%); }
+}
       `}</style>
     </>
   );
