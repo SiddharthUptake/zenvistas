@@ -12,8 +12,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Zenvistas",
-  description: "Zenvistas — Where modern living meets timeless elegance.",
+  title: "Saketham by Visionarc",
+  description: "Saketham by Visionarc.",
 };
 
 export default function RootLayout({ children }) {
