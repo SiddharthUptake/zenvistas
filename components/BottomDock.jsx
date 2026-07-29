@@ -7,6 +7,7 @@ export function BottomDock({
   onOpenLocation,
   onOpenInventory,
   onOpenBrochure,
+  onOpenGallery,
 }) {
   return (
     <nav
@@ -20,6 +21,7 @@ export function BottomDock({
           location: onOpenLocation,
           inventory: onOpenInventory,
           brochure: onOpenBrochure,
+          gallery: onOpenGallery,
         };
         const onClick = handlers[item.action];
         const Component = onClick ? "button" : "a";

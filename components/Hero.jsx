@@ -70,12 +70,6 @@ export function Hero({ loaded, onLoaded }) {
         </button>
       </div>
 
-      <style>{`
-          @keyframes shimmer-sweep {
-  0%   { transform: translateX(-150%); }
-  100% { transform: translateX(150%); }
-}
-      `}</style>
     </>
   );
 }

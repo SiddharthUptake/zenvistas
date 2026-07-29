@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { BottomDock } from "@/components/BottomDock";
 import { ContactView } from "@/components/ContactView";
+import { GalleryView } from "@/components/GalleryView";
 import { Hero } from "@/components/Hero";
 import { IframeView } from "@/components/IframeView";
 import { SideMenu } from "@/components/SideMenu";
@@ -64,6 +65,10 @@ export default function Home() {
     window.open(BROCHURE_URL, "_blank", "noopener,noreferrer");
   };
 
+  const openGallery = () => {
+    setMenuOpen(false);
+    setActiveView("gallery");
+  };
 
   const toggleMenu = () => setMenuOpen((open) => !open);
 
@@ -90,6 +95,7 @@ export default function Home() {
             onOpenLocation={openLocation}
             onOpenInventory={openInventory}
             onOpenBrochure={openBrochure}
+            onOpenGallery={openGallery}
           />
           <div className="visionarc-mark" aria-hidden="true">
             Excellence by <strong>Vision Arc</strong>
@@ -130,6 +136,16 @@ export default function Home() {
           onMenuToggle={toggleMenu}
           title="Saketham interior tour"
           url={INTERIOR_URL}
+        />
+      )}
+
+      {activeView === "gallery" && (
+        <GalleryView
+          menuOpen={menuOpen}
+          onBack={closeOverlay}
+          onFullscreen={openFullscreen}
+          onHome={closeOverlay}
+          onMenuToggle={toggleMenu}
         />
       )}
 
