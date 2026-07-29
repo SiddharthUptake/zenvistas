@@ -12,8 +12,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Saketham by Visionarc",
-  description: "Saketham by Visionarc.",
+  title: "Saketham by Vision Arc",
+  description: "Saketham by Vision Arc.",
   icons: {
     icon: "/visionarc-logo.png",
   },

@@ -7,7 +7,7 @@ export function ProjectHeader({ onBack, onHome }) {
       <Image src="/saketham-logo.png" alt="" width={44} height={44} className="project-card-logo" />
       <div className="project-card-copy">
         <strong>SAKETHAM</strong>
-        <span>BY VISIONARC</span>
+        <span>by Vision Arc</span>
         <small>Veeramapalayam, Coimbatore</small>
       </div>
       <div className="project-card-actions">

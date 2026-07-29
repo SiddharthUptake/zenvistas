@@ -8,7 +8,7 @@ import { Hero } from "@/components/Hero";
 import { IframeView } from "@/components/IframeView";
 import { SideMenu } from "@/components/SideMenu";
 import { TopControls } from "@/components/TopControls";
-import { INTERIOR_URL, LOCATION_URL } from "@/data/navigation";
+import { INTERIOR_URL, INVENTORY_URL, LOCATION_URL } from "@/data/navigation";
 
 export default function Home() {
   const [loaded, setLoaded] = useState(false);
@@ -45,6 +45,11 @@ export default function Home() {
     setActiveView("interior");
   };
 
+  const openInventory = () => {
+    setMenuOpen(false);
+    setActiveView("inventory");
+  };
+
   const openContact = () => {
     setMenuOpen(false);
     setActiveView("contact");
@@ -78,12 +83,27 @@ export default function Home() {
             onOpenContact={openContact}
             onOpenInterior={openInterior}
             onOpenLocation={openLocation}
+            onOpenInventory={openInventory}
           />
           <div className="visionarc-mark" aria-hidden="true">
             Excellence by <strong>Visionarc</strong>
           </div>
         </>
       )}
+
+      {
+        activeView === "inventory" && (
+          <IframeView
+            menuOpen={menuOpen}
+            onBack={closeOverlay}
+            onFullscreen={openFullscreen}
+            onHome={closeOverlay}
+            onMenuToggle={toggleMenu}
+            title="Saketham inventory"
+            url={INVENTORY_URL}
+          />
+        )
+      }
 
       {activeView === "location" && (
         <IframeView
@@ -108,6 +128,8 @@ export default function Home() {
           url={INTERIOR_URL}
         />
       )}
+
+
 
       {activeView === "contact" && (
         <ContactView

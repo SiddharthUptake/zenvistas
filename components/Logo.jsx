@@ -16,7 +16,7 @@ export function Logo() {
         priority
       />
       <span>SAKETHAM</span>
-      <small className="mt-0.5 text-[6px] tracking-[0.18em] text-[#fff2bd]">BY VISIONARC</small>
+      <small className="mt-0.5 text-[6px] tracking-[0.18em] text-[#fff2bd]">by Vision Arc</small>
     </a>
   );
 }

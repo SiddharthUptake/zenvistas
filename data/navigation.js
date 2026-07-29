@@ -2,6 +2,7 @@ import { FiInfo, FiImage, FiFileText, FiPhone } from "react-icons/fi";
 
 export const LOCATION_URL = "https://vademo.uptakeinfotech.com/";
 export const INTERIOR_URL = "https://saketham.visionarc.in/flat-tour";
+export const INVENTORY_URL = "https://saketham.visionarc.in/";
 
 export const railItems = [
   { label: "About", icon: <FiInfo />, action: "about" },
@@ -11,12 +12,13 @@ export const railItems = [
 ];
 
 export const dockItems = [
-  { label: "Webverse", image: "/icon-webverse.gif" },
-  { label: "Interior", image: "/icon-interior.gif", action: "interior" },
-  { label: "Projects", image: "/icon-projects.gif" },
-  { label: "Amenities", image: "/icon-amenities.gif" },
-  { label: "Gallery", image: "/icon-gallery.gif" },
-  { label: "Brochure", image: "/icon-brochure.gif" },
-  { label: "Location", image: "/location.gif", action: "location" },
-  { label: "Enquiry", image: "/icon-enquire.gif", action: "contact" },
+  { label: "Inventory", image: "/icon-webverse.svg" , action: "inventory"},
+  { label: "Interior", image: "/icon-interior.svg", action: "interior" },
+  { label: "Brochure", image: "/icon-brochure.svg" },
+  { label: "Location", image: "/icon-location.svg", action: "location" },
+  { label: "Enquiry", image: "/icon-enquire.svg", action: "contact" },
+  { label: "Gallery", image: "/icon-gallery.svg" },
+  { label: "About Project", image: "/icon-project.svg" },
+  { label: "Amenities", image: "/icon-brochure.svg" },
 ];
+
