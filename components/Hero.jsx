@@ -26,12 +26,18 @@ export function Hero({ loaded, onLoaded }) {
         className="relative z-[5] grid min-h-svh place-content-center justify-items-center px-6 pt-[120px] pb-[180px] text-center [text-shadow:0_3px_16px_rgba(0,0,0,0.9)] max-[760px]:pb-[250px]"
         aria-label="Saketham by Vision Arc"
       >
+        <div className="mb-6 flex items-center gap-4 font-mono text-[11px] font-medium tracking-[0.3em] text-white/75 uppercase max-[760px]:gap-3 max-[760px]:text-[10px]">
+          <span className="h-px w-10 bg-white/40 max-[760px]:w-6" />
+          Est. 2026 · Ahmedabad
+          <span className="h-px w-10 bg-white/40 max-[760px]:w-6" />
+        </div>
+
         <Image
           src="/saketham-logo.png"
           alt=""
           width={118}
           height={118}
-          className="mb-3 h-auto w-[clamp(72px,7vw,118px)] object-contain drop-shadow-[0_12px_26px_rgba(0,0,0,0.72)]"
+          className="mb-3 h-auto w-[clamp(72px,7vw,118px)] object-contain drop-shadow-[0_12px_26px_rgba(0,0,72,0.72)]"
           priority
         />
         <h1 className="font-serif text-[clamp(46px,5.4vw,76px)] leading-[0.95] font-bold tracking-[0.02em] uppercase">
