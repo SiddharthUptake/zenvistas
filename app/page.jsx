@@ -1,14 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
 import { BottomDock } from "@/components/BottomDock";
 import { ContactView } from "@/components/ContactView";
 import { Hero } from "@/components/Hero";
 import { IframeView } from "@/components/IframeView";
 import { SideMenu } from "@/components/SideMenu";
 import { TopControls } from "@/components/TopControls";
-import { INTERIOR_URL, INVENTORY_URL, LOCATION_URL } from "@/data/navigation";
+import { BROCHURE_URL, INTERIOR_URL, INVENTORY_URL, LOCATION_URL } from "@/data/navigation";
 
 export default function Home() {
   const [loaded, setLoaded] = useState(false);
@@ -60,6 +59,12 @@ export default function Home() {
     setActiveView(null);
   };
 
+  const openBrochure = () => {
+    setMenuOpen(false);
+    window.open(BROCHURE_URL, "_blank", "noopener,noreferrer");
+  };
+
+
   const toggleMenu = () => setMenuOpen((open) => !open);
 
   return (
@@ -84,6 +89,7 @@ export default function Home() {
             onOpenInterior={openInterior}
             onOpenLocation={openLocation}
             onOpenInventory={openInventory}
+            onOpenBrochure={openBrochure}
           />
           <div className="visionarc-mark" aria-hidden="true">
             Excellence by <strong>Visionarc</strong>
@@ -91,19 +97,17 @@ export default function Home() {
         </>
       )}
 
-      {
-        activeView === "inventory" && (
-          <IframeView
-            menuOpen={menuOpen}
-            onBack={closeOverlay}
-            onFullscreen={openFullscreen}
-            onHome={closeOverlay}
-            onMenuToggle={toggleMenu}
-            title="Saketham inventory"
-            url={INVENTORY_URL}
-          />
-        )
-      }
+      {activeView === "inventory" && (
+        <IframeView
+          menuOpen={menuOpen}
+          onBack={closeOverlay}
+          onFullscreen={openFullscreen}
+          onHome={closeOverlay}
+          onMenuToggle={toggleMenu}
+          title="Saketham inventory"
+          url={INVENTORY_URL}
+        />
+      )}
 
       {activeView === "location" && (
         <IframeView
@@ -128,8 +132,6 @@ export default function Home() {
           url={INTERIOR_URL}
         />
       )}
-
-
 
       {activeView === "contact" && (
         <ContactView
